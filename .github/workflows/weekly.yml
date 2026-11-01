@@ -29,8 +29,8 @@ jobs:
             exit 1
           fi
           mkdir -p "$DIR/data" "$DIR/reports"
-          [ -f "$DIR/data/state.json" ] || echo '{}' > "$DIR/data/state.json"
-          [ -f "$DIR/data/log.json" ] || echo '[]' > "$DIR/data/log.json"
+          [ -s "$DIR/data/state.json" ] || echo '{}' > "$DIR/data/state.json"
+          [ -s "$DIR/data/log.json" ] || echo '[]' > "$DIR/data/log.json"
           echo "dir=$DIR" >> "$GITHUB_OUTPUT"
       - name: Check sources
         working-directory: ${{ steps.loc.outputs.dir }}
