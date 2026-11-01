@@ -1,16 +1,16 @@
 {
- "last_run_utc": "2026-11-01T08:14:17Z",
+ "last_run_utc": "2026-11-01T08:37:27Z",
  "checked": 22,
- "ok": 14,
- "failed": 8,
- "changed": 0,
+ "ok": 15,
+ "failed": 7,
+ "changed": 1,
  "sources": {
   "shell": {
    "id": "shell",
    "employer": "Shell",
    "url": "https://www.shell.com/graduates",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:15Z",
+   "checked_utc": "2026-11-01T08:36:27Z",
    "http": 200,
    "final_url": "https://www.shell.ae/careers/about-careers-at-shell/shell-graduate-programme.html#vanity-aHR0cHM6Ly93d3cuc2hlbGwuY29tL2dyYWR1YXRlcy5odG1s",
    "text_len": 36,
@@ -21,14 +21,14 @@
    "closed_signal": [],
    "redirected_to_other_host": true,
    "js_rendered_suspected": true,
-   "result": "baseline"
+   "result": "unchanged"
   },
   "nlng": {
    "id": "nlng",
    "employer": "NLNG",
    "url": "https://www.nlng.com",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:18Z",
+   "checked_utc": "2026-11-01T08:36:30Z",
    "http": 200,
    "final_url": "https://www.nlng.com",
    "text_len": 6879,
@@ -37,14 +37,14 @@
     "nigeria"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "aradel": {
    "id": "aradel",
    "employer": "Aradel Holdings",
    "url": "https://careers.aradel.com",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:21Z",
+   "checked_utc": "2026-11-01T08:36:33Z",
    "http": 200,
    "final_url": "https://careers.aradel.com",
    "text_len": 7493,
@@ -56,14 +56,14 @@
     "apply now"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "renaissance": {
    "id": "renaissance",
    "employer": "Renaissance Africa Energy",
    "url": "https://renaissanceafricacom.careers.flair.hr",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:24Z",
+   "checked_utc": "2026-11-01T08:36:36Z",
    "http": 200,
    "final_url": "https://renaissanceafricacom.careers.flair.hr",
    "text_len": 2709,
@@ -73,14 +73,14 @@
     "apply now"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "slb": {
    "id": "slb",
    "employer": "SLB",
    "url": "https://careers.slb.com",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:27Z",
+   "checked_utc": "2026-11-01T08:36:39Z",
    "http": 200,
    "final_url": "https://careers.slb.com",
    "text_len": 14327,
@@ -91,31 +91,32 @@
     "field engineer"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "bakerhughes": {
    "id": "bakerhughes",
    "employer": "Baker Hughes",
    "url": "https://careers.bakerhughes.com",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:32Z",
+   "checked_utc": "2026-11-01T08:36:43Z",
    "http": 200,
    "final_url": "https://careers.bakerhughes.com/global/en",
    "text_len": 2371,
-   "hash": "2396bc87c34f03920c58139f992f1b7fca8033ce5c715a4e40be84d87ce91f8d",
+   "hash": "c846ed0c5c5f1206f5cba3552930d73e889189f72499b73faab135a7672a57aa",
    "keywords": [
     "early career",
     "early careers"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "changed",
+   "new_keywords": []
   },
   "halliburton": {
    "id": "halliburton",
    "employer": "Halliburton",
    "url": "https://jobs.halliburton.com",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:34Z",
+   "checked_utc": "2026-11-01T08:36:45Z",
    "http": 200,
    "final_url": "https://jobs.halliburton.com",
    "text_len": 2969,
@@ -124,23 +125,28 @@
     "graduate"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "exxon": {
    "id": "exxon",
    "employer": "ExxonMobil",
-   "url": "https://careers.exxonmobil.com",
-   "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:37Z",
-   "result": "needs_recheck",
-   "reason": "fetch failed: HTTPError: HTTP Error 404: Not Found"
+   "url": "https://jobs.exxonmobil.com/",
+   "provenance": "provided by user",
+   "checked_utc": "2026-11-01T08:36:48Z",
+   "http": 200,
+   "final_url": "https://jobs.exxonmobil.com/",
+   "text_len": 8642,
+   "hash": "9ab9d02542f97cda646a672982a8d9d32b2aee9f3c9dcd53fd5ff6d6e3cd3e0e",
+   "keywords": [],
+   "closed_signal": [],
+   "result": "baseline"
   },
   "chevron": {
    "id": "chevron",
    "employer": "Chevron",
    "url": "https://careers.chevron.com",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:40Z",
+   "checked_utc": "2026-11-01T08:36:50Z",
    "http": 200,
    "final_url": "https://careers.chevron.com",
    "text_len": 5284,
@@ -149,14 +155,14 @@
     "early career"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "total": {
    "id": "total",
    "employer": "TotalEnergies",
    "url": "https://careers.totalenergies.com",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:42Z",
+   "checked_utc": "2026-11-01T08:36:52Z",
    "result": "needs_recheck",
    "reason": "disallowed by robots.txt"
   },
@@ -165,7 +171,7 @@
    "employer": "bp",
    "url": "https://www.bp.com/graduates",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:44Z",
+   "checked_utc": "2026-11-01T08:36:55Z",
    "result": "needs_recheck",
    "reason": "disallowed by robots.txt"
   },
@@ -174,7 +180,7 @@
    "employer": "Eni",
    "url": "https://www.eni.com/en-IT/careers.html",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:47Z",
+   "checked_utc": "2026-11-01T08:36:57Z",
    "http": 200,
    "final_url": "https://www.eni.com/en-IT/careers.html",
    "text_len": 27276,
@@ -185,14 +191,14 @@
     "nigeria"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "equinor": {
    "id": "equinor",
    "employer": "Equinor",
    "url": "https://www.equinor.com/careers",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:49Z",
+   "checked_utc": "2026-11-01T08:36:59Z",
    "http": 200,
    "final_url": "https://www.equinor.com/careers",
    "text_len": 3844,
@@ -201,28 +207,28 @@
     "graduate"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "aramco": {
    "id": "aramco",
    "employer": "Saudi Aramco",
    "url": "https://www.aramco.com/en/careers",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:52Z",
+   "checked_utc": "2026-11-01T08:37:03Z",
    "http": 200,
    "final_url": "https://www.aramco.com/en/careers",
    "text_len": 4540,
    "hash": "63ed68a91b5da734cb49007ff0081f8ca11df6666b09406ec26f1822da7bdc0a",
    "keywords": [],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "adnoc": {
    "id": "adnoc",
    "employer": "ADNOC",
    "url": "https://careers.adnoc.ae",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:13:56Z",
+   "checked_utc": "2026-11-01T08:37:07Z",
    "result": "needs_recheck",
    "reason": "robots.txt unreachable (URLError); skipped to stay polite"
   },
@@ -231,7 +237,7 @@
    "employer": "QatarEnergy",
    "url": "https://www.qatarenergy.qa/en/WorkWithUs",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:13:59Z",
+   "checked_utc": "2026-11-01T08:37:09Z",
    "http": 200,
    "final_url": "https://www.qatarenergy.qa/en/Pages/vHome.aspx",
    "text_len": 6095,
@@ -240,14 +246,14 @@
     "petroleum"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "petrobras": {
    "id": "petrobras",
    "employer": "Petrobras",
    "url": "https://petrobras.com.br/en/",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:14:02Z",
+   "checked_utc": "2026-11-01T08:37:12Z",
    "http": 200,
    "final_url": "https://petrobras.com.br/en",
    "text_len": 11155,
@@ -256,14 +262,14 @@
     "petroleum"
    ],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   },
   "wood": {
    "id": "wood",
    "employer": "Wood",
    "url": "https://www.woodplc.com/careers",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:14:05Z",
+   "checked_utc": "2026-11-01T08:37:16Z",
    "result": "needs_recheck",
    "reason": "disallowed by robots.txt"
   },
@@ -272,7 +278,7 @@
    "employer": "Technip Energies",
    "url": "https://careers.technipenergies.com",
    "provenance": "c",
-   "checked_utc": "2026-11-01T08:14:08Z",
+   "checked_utc": "2026-11-01T08:37:18Z",
    "result": "needs_recheck",
    "reason": "robots.txt unreachable (URLError); skipped to stay polite"
   },
@@ -281,7 +287,7 @@
    "employer": "Worley",
    "url": "https://www.worley.com/careers",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:14:10Z",
+   "checked_utc": "2026-11-01T08:37:20Z",
    "result": "needs_recheck",
    "reason": "disallowed by robots.txt"
   },
@@ -290,7 +296,7 @@
    "employer": "Seplat Energy",
    "url": "https://seplatenergy.com/careers/",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:14:12Z",
+   "checked_utc": "2026-11-01T08:37:22Z",
    "result": "needs_recheck",
    "reason": "disallowed by robots.txt"
   },
@@ -299,14 +305,14 @@
    "employer": "NNPC Limited",
    "url": "https://nnpcgroup.com/",
    "provenance": "m",
-   "checked_utc": "2026-11-01T08:14:14Z",
+   "checked_utc": "2026-11-01T08:37:24Z",
    "http": 200,
    "final_url": "https://nnpcgroup.com/",
    "text_len": 982,
    "hash": "0971848a1ead9191ffe89c0f691d8ca15e3707fcfd50131fd3476ae88c5c777e",
    "keywords": [],
    "closed_signal": [],
-   "result": "baseline"
+   "result": "unchanged"
   }
  }
 }
