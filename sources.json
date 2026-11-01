@@ -1,0 +1,134 @@
+[
+ {
+  "id": "shell",
+  "employer": "Shell",
+  "url": "https://www.shell.com/graduates",
+  "provenance": "c"
+ },
+ {
+  "id": "nlng",
+  "employer": "NLNG",
+  "url": "https://www.nlng.com",
+  "provenance": "c"
+ },
+ {
+  "id": "aradel",
+  "employer": "Aradel Holdings",
+  "url": "https://careers.aradel.com",
+  "provenance": "c"
+ },
+ {
+  "id": "renaissance",
+  "employer": "Renaissance Africa Energy",
+  "url": "https://renaissanceafricacom.careers.flair.hr",
+  "provenance": "c"
+ },
+ {
+  "id": "slb",
+  "employer": "SLB",
+  "url": "https://careers.slb.com",
+  "provenance": "c"
+ },
+ {
+  "id": "bakerhughes",
+  "employer": "Baker Hughes",
+  "url": "https://careers.bakerhughes.com",
+  "provenance": "m"
+ },
+ {
+  "id": "halliburton",
+  "employer": "Halliburton",
+  "url": "https://jobs.halliburton.com",
+  "provenance": "m"
+ },
+ {
+  "id": "exxon",
+  "employer": "ExxonMobil",
+  "url": "https://careers.exxonmobil.com",
+  "provenance": "m"
+ },
+ {
+  "id": "chevron",
+  "employer": "Chevron",
+  "url": "https://careers.chevron.com",
+  "provenance": "m"
+ },
+ {
+  "id": "total",
+  "employer": "TotalEnergies",
+  "url": "https://careers.totalenergies.com",
+  "provenance": "m"
+ },
+ {
+  "id": "bp",
+  "employer": "bp",
+  "url": "https://www.bp.com/graduates",
+  "provenance": "c"
+ },
+ {
+  "id": "eni",
+  "employer": "Eni",
+  "url": "https://www.eni.com/en-IT/careers.html",
+  "provenance": "m"
+ },
+ {
+  "id": "equinor",
+  "employer": "Equinor",
+  "url": "https://www.equinor.com/careers",
+  "provenance": "m"
+ },
+ {
+  "id": "aramco",
+  "employer": "Saudi Aramco",
+  "url": "https://www.aramco.com/en/careers",
+  "provenance": "m"
+ },
+ {
+  "id": "adnoc",
+  "employer": "ADNOC",
+  "url": "https://careers.adnoc.ae",
+  "provenance": "c"
+ },
+ {
+  "id": "qatar",
+  "employer": "QatarEnergy",
+  "url": "https://www.qatarenergy.qa/en/WorkWithUs",
+  "provenance": "m"
+ },
+ {
+  "id": "petrobras",
+  "employer": "Petrobras",
+  "url": "https://petrobras.com.br/en/",
+  "provenance": "m"
+ },
+ {
+  "id": "wood",
+  "employer": "Wood",
+  "url": "https://www.woodplc.com/careers",
+  "provenance": "m"
+ },
+ {
+  "id": "technip",
+  "employer": "Technip Energies",
+  "url": "https://careers.technipenergies.com",
+  "provenance": "c"
+ },
+ {
+  "id": "worley",
+  "employer": "Worley",
+  "url": "https://www.worley.com/careers",
+  "provenance": "m"
+ },
+ {
+  "id": "seplat",
+  "employer": "Seplat Energy",
+  "url": "https://seplatenergy.com/careers/",
+  "provenance": "m"
+ },
+ {
+  "id": "nnpc",
+  "employer": "NNPC Limited",
+  "url": "https://nnpcgroup.com/",
+  "provenance": "m"
+ }
+]

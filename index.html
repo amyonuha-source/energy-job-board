@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Energy Career Board – C. Onuh</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1b2430;--mu:#5d6b7c;--bd:#dde2e8;--ac:#0b5fa5;--ok:#1a7f4b;--wn:#a86400;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161c;--card:#1a2029;--tx:#e8ecf1;--mu:#9aa7b6;--bd:#2c3542;--ac:#5aa9ec;--ok:#4cc38a;--wn:#e0a040;--bad:#f07a72}}
+:root[data-theme="dark"]{--bg:#12161c;--card:#1a2029;--tx:#e8ecf1;--mu:#9aa7b6;--bd:#2c3542;--ac:#5aa9ec;--ok:#4cc38a;--wn:#e0a040;--bad:#f07a72}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:inherit}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+header{padding:14px 18px;border-bottom:1px solid var(--bd);background:var(--card)}
+h1{font-size:19px;margin:0}h2{font-size:16px;margin:18px 0 8px}small,.mu{color:var(--mu)}
+nav{display:flex;gap:6px;flex-wrap:wrap;padding:10px 18px}
+nav button,.btn{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:7px 12px;border-radius:8px;cursor:pointer;font:inherit}
+nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:1100px;margin:0 auto;padding:0 18px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px}
+.num{font-size:26px;font-weight:700}
+.banner{border:1px solid var(--wn);border-radius:10px;padding:10px 12px;background:var(--card);margin:12px 0}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--bd);border-radius:20px;padding:1px 8px;margin-right:4px}
+.t-ok{color:var(--ok);border-color:var(--ok)}.t-wn{color:var(--wn);border-color:var(--wn)}.t-bad{color:var(--bad);border-color:var(--bad)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:6px 8px}
+textarea{width:100%;min-height:90px}
+.job{cursor:pointer;margin-bottom:8px}.job:hover{border-color:var(--ac)}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--bd);padding:6px 8px;text-align:left;vertical-align:top}
+a{color:var(--ac)}.hide{display:none}
+</style></head><body>
+<header><h1>Energy Career Board <small>· Onuh Chiamaka Marycynthia</small></h1>
+<small id="stamp"></small></header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<script>
+var TODAY="2026-11-01";
+var SNAPSHOT="1 Nov 2026 (manual research snapshot)";
+var STAT={VO:"Verified official",OI:"Official source, details incomplete",UN:"Unverified",HR:"High risk",CL:"Closed or withdrawn"};
+var PIPE=["New","Verification pending","Eligible to review","Saved","Preparing application","Ready for submission","Applied","Assessment","Interview","Offer","Rejected","Withdrawn","Closed"];
+var JOBS=[
+{id:"J001",emp:"Shell (SPDC)",title:"Shell Graduate Programme 2026 – Nigeria (Engineering incl. Production; Geoscience; Commercial)",level:"Graduate",country:"Nigeria",city:"Lagos",st:"CL",posted:"2026-04-16",deadline:"2026-04-25",req:"R182181 (single third-party source, unconfirmed)",
+ src:[["Shell graduates page (cited by aggregators; I did not open it)","https://www.shell.com/graduates"],["Aggregator: Opportunities for Africans","https://www.opportunitiesforafricans.com/shell-nigeria-graduate-programme-2026-for-young-nigerian-graduates/"],["Aggregator: JobNow","https://jobnow.ng/shell-petroleum-development-company-spdc-graduate-programme-2026-engineering/"],["Aggregator: Fuzu (shows “closed for applications”)","https://www.fuzu.com/nigeria/jobs/shell-graduate-programme-2026-geoscience-shell-petroleum-development-company"]],
+ apply:"https://www.shell.com/graduates",
+ ev:"Four independent aggregators agree on a 16 Apr 2026 opening and 25 Apr 2026 closing date, and one shows the listing as closed. Official page and Workday portal not opened by me, so closure is well supported but not confirmed from the employer.",
+ risk:["No fee request seen; one aggregator repeats Shell’s warning that fees are never charged.","Duplicate: same programme appears on 6+ aggregator URLs (grouped here as one record).","Entity discrepancy to resolve: aggregators label this ‘SPDC’, while one aggregator says Renaissance acquired SPDC. Confirm which employer actually ran the 2026 cycle."],
+ elig:["Not eligible this cycle","Aggregators state post-NYSC graduates, under 3 years’ experience. NYSC completion is expected June 2027, and the cycle has closed."],
+ comp:"Not disclosed (aggregators say “competitive”; no figure found)",
+ sc:{fit:4,elig:1,comp:4,emp:5,mob:4,urg:0,rel:4},
+ note:"Prior cycle opened mid-April and closed in under 2 weeks. A 2027 cycle is PREDICTED, not confirmed. If it follows the same timing it opens before NYSC completion; check whether an NYSC certificate or exemption is mandatory at application."},
+{id:"J002",emp:"Nigeria LNG (NLNG)",title:"Graduate Trainee Programme – 2025 intake",level:"Graduate",country:"Nigeria",city:"Bonny Island / Port Harcourt (unconfirmed)",st:"CL",posted:"2025-09-09",deadline:"2025-09-29",req:"Not found",
+ src:[["Aggregator: MySchoolGist","https://myschoolgist.com/news/nlng-graduate-trainee/"],["Aggregator: JobberNaija","https://jobbernaija.com/job/nlng-graduate-trainee-program-2025"],["Aggregator: TheCable","https://www.thecable.ng/?p=769803"]],
+ apply:"https://www.nlng.com",
+ ev:"Aggregators agree on posting 9 Sep 2025 and closing 29 Sep 2025. They name the NLNG careers portal at nlng.com. I did not open it. Marked closed from the stated deadline; the 2026 intake is not confirmed.",
+ risk:["Aggregators advise using only the official portal. Impersonation risk is real for NLNG, so never apply through a link sent by message."],
+ elig:["Eligibility unclear","Intake requirements not confirmed from NLNG. Chiamaka has previous NLNG internship experience (Mar–Sep 2024 per CV), which is a genuine strength."],
+ comp:"Not disclosed",
+ sc:{fit:4,elig:2,comp:4,emp:5,mob:2,urg:0,rel:4},
+ note:"Third-party guide says NLNG timing “varies, typically Q4”. That is a historical pattern, unconfirmed. Watch nlng.com/careers weekly through Q4 2026."},
+{id:"J003",emp:"Greenville LNG",title:"Graduate Engineering Trainee Programme 2026",level:"Graduate",country:"Nigeria",city:"Not stated",st:"UN",posted:null,deadline:null,req:"Not found",
+ src:[["Aggregator: AfterSchoolAfrica","https://www.afterschoolafrica.com/114171/greenville-lng-graduate-engineering-trainee/"]],apply:null,
+ ev:"Single aggregator says applications are open. No employer page found, no deadline, no requisition.",
+ risk:["Cannot be matched to an official vacancy.","Single-source listing."],
+ elig:["Eligibility unclear","Requirements not retrieved."],comp:"Not disclosed",
+ sc:{fit:3,elig:2,comp:2,emp:3,mob:1,urg:2,rel:3},note:"Find the official Greenville LNG careers page before treating this as actionable."},
+{id:"J004",emp:"ExxonMobil Nigeria",title:"2026 Careers and Internship Programme (headline only)",level:"Unknown",country:"Nigeria",city:"Not stated",st:"UN",posted:null,deadline:null,req:"Not found",
+ src:[["Aggregator tag page: Arbiterz","https://arbiterz.com/tag/oil-and-gas-jobs-nigeria/"]],apply:null,
+ ev:"Only a headline snippet on a tag page; I did not read the article or find an employer page.",
+ risk:["Headline only. No details to verify."],elig:["Eligibility unclear","No requirements retrieved."],comp:"Not disclosed",
+ sc:{fit:3,elig:2,comp:4,emp:5,mob:4,urg:2,rel:4},note:"Third-party guide suggests ExxonMobil Nigeria recruits roughly Oct–Feb (unconfirmed pattern)."},
+{id:"J005",emp:"Powergas Nigeria",title:"Graduate Trainee Programme 2026 (GTP II – Technical)",level:"Graduate",country:"Nigeria",city:"Not stated",st:"UN",posted:null,deadline:null,req:"Not found",
+ src:[["Aggregator tag page: Arbiterz","https://arbiterz.com/tag/oil-and-gas-jobs-nigeria/"]],apply:null,
+ ev:"Headline only; no employer page, deadline or requirements retrieved.",risk:["Headline only."],elig:["Eligibility unclear","No requirements retrieved."],comp:"Not disclosed",
+ sc:{fit:3,elig:2,comp:2,emp:2,mob:1,urg:2,rel:3},note:""},
+{id:"J006",emp:"TotalEnergies Nigeria",title:"Young Graduate Programme (2025 write-up)",level:"Graduate",country:"Nigeria / Paris trip",city:"Not stated",st:"UN",posted:null,deadline:null,req:"Not found",
+ src:[["Aggregator: SchoolNGR","https://www.schoolngr.com/news/totalenergies-young-graduate-program"]],apply:null,
+ ev:"A third-party write-up for 2025, with “deadline not specified”. It lists residency and an age limit under 26. I have not seen this on an employer page.",
+ risk:["Stale 2025 content.","Age limit is third-party only; I do not assume or infer Chiamaka’s age. Confirm on the official page."],
+ elig:["Eligibility unclear","Third-party age cap needs checking against the official criteria."],comp:"Not disclosed",
+ sc:{fit:4,elig:2,comp:4,emp:5,mob:4,urg:1,rel:4},note:"Third-party guide suggests a Sep–Dec window (unconfirmed pattern)."},
+{id:"J007",emp:"Chevron Nigeria",title:"NMA Undergraduate Internship Programme 2026",level:"Internship (students)",country:"Nigeria",city:"Lekki, Lagos",st:"UN",posted:null,deadline:null,req:"R000067591 (third-party)",
+ src:[["Aggregator: MySchoolGist","https://myschoolgist.com/ng/chevron-undergraduate-internship-2026"]],apply:null,
+ ev:"Third-party summary only. It says the internship is for current students completing SIWES.",
+ risk:["Not matched to Chevron’s own system."],elig:["Not eligible based on published requirement (third-party summary)","Chiamaka graduated Dec 2025, so a student SIWES internship does not fit."],comp:"Not disclosed",
+ sc:{fit:1,elig:0,comp:2,emp:5,mob:3,urg:1,rel:3},note:"Kept so the board shows an ineligible role instead of silently hiding it."},
+{id:"J008",emp:"Aradel Holdings",title:"Graduate Trainee Programme (2026 programme, 12-month)",level:"Graduate",country:"Nigeria",city:"Lagos (third-party)",st:"CL",posted:"2025-09-17",deadline:"2025-10-03",req:"Not found",
+ src:[["Aradel careers (cited by aggregator; not opened)","https://careers.aradel.com"],["Aggregator: Issues Magazine","https://theissuesmagazine.com/aradel-oil-and-gas-graduate-trainee-program-2026-how-to-apply"],["Aggregator: Crisp","https://crispng.com/aradel-oil-gas-graduate-trainee-program-2026/"],["Aggregator: Jobzilla","https://www.jobzilla.ng/jobs/aradel-holdings-graduate-trainee-program-2026-264776"]],apply:"https://careers.aradel.com",
+ ev:"Several aggregators agree on opening mid-Sep 2025 and closing 3 Oct 2025. Not confirmed from Aradel itself.",
+ risk:["Aggregators say applications ran via a tally.so form and a named recruitment partner. That is not verified: confirm on Aradel’s own site that the partner is authorised before sending any document.","Duplicate: many aggregator copies, grouped as one."],
+ elig:["Not eligible this cycle","Closed. Published criteria (third-party): NYSC certificate or exemption, 2:1 or better, max 3 years’ post-graduation experience. Your first class degree satisfies the grade; NYSC is the gate."],comp:"Not disclosed",
+ sc:{fit:4,elig:2,comp:3,emp:4,mob:1,urg:0,rel:4},note:"Pattern: Sep–Oct. A 2027 cycle in Sep–Oct would fall AFTER your June 2027 NYSC completion, so Batch 4 is the realistic window (predicted, unconfirmed)."},
+{id:"J009",emp:"Renaissance Africa Energy",title:"Renaissance Graduate Programme 2026",level:"Graduate",country:"Nigeria",city:"Port Harcourt",st:"CL",posted:"2026-05-04",deadline:"2026-05-13",req:"Not found",
+ src:[["Employer portal as cited by an aggregator (not opened)","https://renaissanceafricacom.careers.flair.hr"],["Aggregator: Opportunities for Africans","https://www.opportunitiesforafricans.com/the-renaissance-graduate-trainee-programme-2026/"],["Aggregator: AfterSchoolAfrica","https://www.afterschoolafrica.com/116086/renaissance-graduate-programme/"]],apply:"https://renaissanceafricacom.careers.flair.hr",
+ ev:"Multiple aggregators give 4 May 2026 opening and 13 May 2026 deadline (a 9-day window). Portal domain comes from one aggregator, so verify it from Renaissance’s main site before use.",
+ risk:["Portal host is on a third-party hiring platform. Reach it only from the company’s own website.","Aggregators warn that multiple applications cause disqualification."],
+ elig:["Eligibility unclear","Engineering, IT, geoscience and science graduates mentioned (third-party). NYSC rule not retrieved."],comp:"Not disclosed",
+ sc:{fit:4,elig:2,comp:3,emp:4,mob:1,urg:0,rel:4},note:"Very short window last time. Predicted next cycle ~May 2027 (unconfirmed): watch from March."},
+{id:"J010",emp:"SLB",title:"Field Engineer Trainee – Port Harcourt (Early Careers)",level:"Graduate",country:"Nigeria",city:"Port Harcourt",st:"UN",posted:null,deadline:null,req:"Not found",
+ src:[["SLB careers (cited; not opened)","https://careers.slb.com"],["Aggregator: EnergyJobSearch (undated)","https://energyjobsearch.com/jobs/engineering-jobs/1282051"],["Aggregator: JobberNaija (6 Feb 2026)","https://jobbernaija.com/job/schlumberger-slb-graduate-trainee-program-2026-graduate-trainee-jobs-in-rivers"],["Aggregator: EduGist (2024 copy)","https://edugist.org/apply-2024-schlumberger-technology-graduate-trainee-programme/amp/"]],apply:"https://careers.slb.com",
+ ev:"Same role shows on several aggregators from 2024 to 2026, so likely a rolling or repeating requisition. I cannot confirm that it is live today.",
+ risk:["Reposts across years (treated as one record).","Field role needs travel offshore/onshore (third-party)."],
+ elig:["Likely eligible, confirmation needed","Engineering degree incl. Petroleum is listed (third-party). Check NYSC, graduation window and nationality rules on SLB’s site."],comp:"Not disclosed",
+ sc:{fit:4,elig:3,comp:4,emp:5,mob:5,urg:3,rel:5},note:"Highest-priority item to verify first: search careers.slb.com for ‘Field Engineer Trainee’ Nigeria and capture the requisition ID."},
+{id:"J011",emp:"Baker Hughes",title:"Emerging Talent: LEAD – Field Engineer (Nigeria) 2026",level:"Graduate",country:"Nigeria",city:"Not stated",st:"UN",posted:null,deadline:null,req:"Not found",
+ src:[["Aggregator: SmartyAcad","https://jobs.smartyacad.com/baker-hughes-early-career-program-2026-for-field-engineers/"],["Aggregator: Crisp","https://crispng.com/baker-hughes-graduate-early-career-program-2026/"],["Prior cycle (2024) closed","https://climatejobs.shortlist.net/companies/baker-hughes/jobs/29940515-early-career-lead-field-engineer-nigeria-2024-opportunities"]],apply:null,
+ ev:"Aggregators report a 2026 opening with no deadline. The 2024 version is shown as closed, which shows the programme repeats.",
+ risk:["No employer URL for this exact role.","One article lists ‘work without sponsorship’ and a 36-month graduation window, but it is unclear which role they belong to."],
+ elig:["Eligibility unclear","Check graduation window: you graduated Dec 2025, so it should fit if the 36-month rule applies."],comp:"Not disclosed",
+ sc:{fit:4,elig:3,comp:4,emp:5,mob:5,urg:3,rel:5},note:"Verify on Baker Hughes’ own careers site and capture the requisition ID."},
+{id:"J012",emp:"Halliburton",title:"Graduate Internship – Port Harcourt (req 207039 per aggregator)",level:"Internship / graduate",country:"Nigeria",city:"Port Harcourt",st:"UN",posted:null,deadline:null,req:"207039 (single third-party)",
+ src:[["Aggregator: NDLink","https://ndlink.org/jobs/call-for-applications-halliburton-graduate-internship-port-harcourt/"]],apply:null,
+ ev:"One aggregator, undated, citing the Halliburton careers portal.",risk:["Single source, undated."],
+ elig:["Eligibility unclear","Requirements not retrieved."],comp:"Not disclosed",sc:{fit:3,elig:2,comp:3,emp:5,mob:4,urg:2,rel:4},note:"Search the requisition number on Halliburton’s own careers site."},
+{id:"T900",emp:"TEST FIXTURE",title:"“Graduate Recruitment” requiring a processing fee (synthetic, not a real posting)",level:"Graduate",country:"n/a",city:"n/a",st:"HR",posted:null,deadline:"2026-11-05",req:"None",
+ src:[["Synthetic fixture for acceptance testing","#"]],apply:null,fixture:true,
+ ev:"Created to prove the exclusion rule works. Not a real vacancy.",
+ risk:["Requests an application fee.","Contact via free email domain.","Cannot be matched to any employer page."],
+ elig:["Eligibility unclear","n/a"],comp:"Promises guaranteed high salary (red flag)",sc:{fit:5,elig:5,comp:5,emp:5,mob:5,urg:5,rel:5},note:"Even with perfect factor scores, verification gate forces ‘Excluded’."}
+];
+var EMP=[{"id": "shell", "n": "Shell", "cat": "Integrated major", "url": "https://www.shell.com/graduates", "prov": "c", "note": "2026 Nigeria cycle closed 25 Apr 2026. Needs completed NYSC (aggregators). Possible entity discrepancy: aggregators call it SPDC, which one aggregator says Renaissance acquired. Check."}, {"id": "nlng", "n": "NLNG", "cat": "Nigerian LNG", "url": "https://www.nlng.com", "prov": "c", "note": "2025 intake closed 29 Sep 2025. Third-party guide: usually Q4. You interned here (CV)."}, {"id": "aradel", "n": "Aradel Holdings", "cat": "Nigerian independent", "url": "https://careers.aradel.com", "prov": "c", "note": "2026 trainee cycle closed 3 Oct 2025 (aggregators). Needs NYSC done, 2:1+, max 3 yrs experience. Aggregators say a partner and a tally.so form were used: confirm on Aradel\u2019s own site before submitting anything. Predicted next: Sep\u2013Oct 2027."}, {"id": "renaissance", "n": "Renaissance Africa Energy", "cat": "Nigerian independent (NNPC/TotalEnergies/Eni)", "url": "https://renaissanceafricacom.careers.flair.hr", "prov": "c", "note": "2026 graduate programme closed 13 May 2026, Port Harcourt. Predicted next: ~May 2027 (unconfirmed)."}, {"id": "slb", "n": "SLB", "cat": "Oilfield services", "url": "https://careers.slb.com", "prov": "c", "note": "Field Engineer Trainee, Port Harcourt appears on aggregators, with reposts back to 2024. Petroleum degrees listed as eligible (third-party)."}, {"id": "bakerhughes", "n": "Baker Hughes", "cat": "Oilfield services", "url": "https://careers.bakerhughes.com", "prov": "m", "note": "LEAD Field Engineer (Nigeria) 2024 closed; 2026 version reported by aggregators. Third-party: degree within 36 months."}, {"id": "halliburton", "n": "Halliburton", "cat": "Oilfield services", "url": "https://jobs.halliburton.com", "prov": "m", "note": "Port Harcourt graduate internship, req 207039, reported by one aggregator, undated."}, {"id": "exxon", "n": "ExxonMobil", "cat": "Integrated major", "url": "https://careers.exxonmobil.com", "prov": "m", "note": "Headline-only report of a 2026 Nigeria programme. Third-party pattern Oct\u2013Feb."}, {"id": "chevron", "n": "Chevron", "cat": "Integrated major", "url": "https://careers.chevron.com", "prov": "m", "note": "Only a student internship found (not eligible). Graduate route not yet researched."}, {"id": "total", "n": "TotalEnergies", "cat": "Integrated major", "url": "https://careers.totalenergies.com", "prov": "m", "note": "Third-party 2025 write-up; age cap claimed by third party. Pattern Sep\u2013Dec. Check official criteria."}, {"id": "bp", "n": "bp", "cat": "Integrated major", "url": "https://www.bp.com/graduates", "prov": "c", "note": "Not yet researched beyond URL."}, {"id": "eni", "n": "Eni", "cat": "Integrated major", "url": "https://www.eni.com/en-IT/careers.html", "prov": "m", "note": "Not yet researched."}, {"id": "equinor", "n": "Equinor", "cat": "Integrated major", "url": "https://www.equinor.com/careers", "prov": "m", "note": "Not yet researched. Work authorization must be assessed."}, {"id": "aramco", "n": "Saudi Aramco", "cat": "National oil company", "url": "https://www.aramco.com/en/careers", "prov": "m", "note": "Not yet researched. Nationality rules likely strict, so do not assume."}, {"id": "adnoc", "n": "ADNOC", "cat": "National oil company", "url": "https://careers.adnoc.ae", "prov": "c", "note": "URL cited in a garbled aggregator list. Not yet researched."}, {"id": "qatar", "n": "QatarEnergy", "cat": "National oil company", "url": "https://www.qatarenergy.qa/en/WorkWithUs", "prov": "m", "note": "Not yet researched."}, {"id": "petrobras", "n": "Petrobras", "cat": "National oil company", "url": "https://petrobras.com.br/en/", "prov": "m", "note": "Not yet researched. Language requirements likely."}, {"id": "wood", "n": "Wood", "cat": "Engineering", "url": "https://www.woodplc.com/careers", "prov": "m", "note": "Not yet researched."}, {"id": "technip", "n": "Technip Energies", "cat": "Engineering", "url": "https://careers.technipenergies.com", "prov": "c", "note": "Not yet researched beyond URL."}, {"id": "worley", "n": "Worley", "cat": "Engineering", "url": "https://www.worley.com/careers", "prov": "m", "note": "Not yet researched."}, {"id": "seplat", "n": "Seplat Energy", "cat": "Nigerian independent", "url": "https://seplatenergy.com/careers/", "prov": "m", "note": "Not yet researched."}, {"id": "nnpc", "n": "NNPC Limited", "cat": "National oil company", "url": "https://nnpcgroup.com/", "prov": "m", "note": "Not yet researched."}];
+var WIN=[["Batch 1 · Oct 2026–Jan 2027","NLNG (typically Q4); TotalEnergies (Sep–Dec); ExxonMobil (Oct–Feb)","Predicted from third-party guide, NOT confirmed. Check each official page weekly."],
+["Batch 2 · Feb–Apr 2027","Shell Nigeria (2026 cycle ran 16–25 Apr)","Predicted from last year’s dates. Opens before NYSC completion: confirm whether certificate is mandatory."],
+["Batch 3 · May–Jul 2027","None identified yet","Research pending. NYSC completion expected June 2027."],
+["Batch 4 · Aug–Oct 2027","None identified yet","Research pending."]];
+var W={fit:25,elig:20,comp:10,emp:10,mob:5,urg:10,rel:15};/* sums to 95; verification weight below */
+var VW=5;
+function S(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function P(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var ST=S("ejb_state",{stage:{},note:{},follow:{},hist:{}});
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function days(d){return d?Math.ceil((new Date(d+"T00:00:00Z")-new Date(TODAY+"T00:00:00Z"))/864e5):null}
+function gate(j){/* verification is a gate, not a penalty */
+ if(j.st==="HR")return"Excluded: high-risk";if(j.st==="CL")return"Not actionable: closed";if(j.st==="UN")return"Not actionable: unverified";
+ if(j.elig[0].indexOf("Not eligible")===0)return"Not actionable: ineligible";return"Actionable"}
+function score(j){var t=0,k;for(k in W)t+=W[k]*j.sc[k]/5;t+=VW*(j.st==="VO"?1:j.st==="OI"?.6:0);return Math.round(t)}
+function stage(j){return ST.stage[j.id]||(j.st==="HR"?"Closed":j.st==="CL"?"Closed":j.st==="UN"?"Verification pending":"New")}
+function tagS(j){var c=j.st==="VO"?"t-ok":j.st==="HR"?"t-bad":j.st==="OI"?"t-wn":j.st==="CL"?"":"t-wn";return'<span class="tag '+c+'">'+STAT[j.st]+'</span>'}
+var tab="dash",sel=null,F={q:"",st:"",emp:"",sort:"score"};
+var tabs=[["dash","Dashboard"],["jobs","Jobs"],["pipe","Pipeline"],["win","Recruitment windows"],["emp","Employers"],["cv","CV"],["tailor","Tailor CV"],["prep","Prep & STAR"],["out","Outreach"],["logs","Logs & export"]];
+function nav(){document.getElementById("nav").innerHTML=tabs.map(function(t){return'<button class="'+(tab===t[0]?"on":"")+'" data-t="'+t[0]+'">'+t[1]+"</button>"}).join("");
+ [].forEach.call(document.querySelectorAll("#nav button"),function(b){b.onclick=function(){tab=b.dataset.t;sel=null;render()}})}
+function visible(){return JOBS.filter(function(j){return!j.fixture||F.fx})}
+function dash(){var v=JOBS.filter(function(j){return!j.fixture});var act=v.filter(function(j){return gate(j)==="Actionable"});
+ var c7=act.filter(function(j){var d=days(j.deadline);return d!==null&&d>=0&&d<=7}).length,c14=act.filter(function(j){var d=days(j.deadline);return d!==null&&d>=0&&d<=14}).length;
+ var saved=JOBS.filter(function(j){return stage(j)==="Saved"}).length;
+ function n(a,b){return'<div class="card"><div class="num">'+a+'</div><small>'+b+"</small></div>"}
+ return'<div class="banner"><b>Read this first.</b> No vacancy here is “Verified official”: I could only reach third-party aggregator pages, not employer portals. That is why <b>0 jobs are actionable today</b>. The Shell and NLNG cycles found are closed. Nothing is hidden, and every record shows its evidence. Refresh health is shown in the header and the Logs tab.</div>'+
+ '<div class="grid">'+n(act.length,"Actionable (verified, open, eligible)")+n(v.filter(function(j){return j.st==="VO"}).length,"Verified official")+n(c7+" / "+c14,"Closing in 7 / 14 days (actionable only)")+n(saved,"Saved")+
+ n(JOBS.filter(function(j){return["Preparing application","Ready for submission"].indexOf(stage(j))>=0}).length,"In progress")+n(JOBS.filter(function(j){return stage(j)==="Applied"}).length,"Applied")+n(JOBS.filter(function(j){return stage(j)==="Interview"}).length,"Interview")+
+ n(v.filter(function(j){return j.st==="UN"}).length,"Unverified (not recommended)")+n(v.filter(function(j){return j.st==="CL"}).length,"Closed")+'</div>'+
+ '<h2>Upcoming recruitment windows</h2>'+WIN.slice(0,2).map(function(w){return'<div class="card" style="margin-bottom:8px"><b>'+w[0]+'</b><br>'+w[1]+'<br><small>'+w[2]+"</small></div>"}).join("")+
+ '<h2>This week’s actions</h2><ol><li>Open nlng.com careers and the Shell graduates page directly and record whether a 2026/27 cycle is live.</li><li>Research the 15 employers still marked “not yet researched”.</li><li>Confirm whether Shell-type programmes require a completed NYSC certificate, because this decides if the April 2027 window is usable.</li><li>Confirm the QGIS, DWISM and ANSYS project details; they are not in the CV on file.</li></ol>'}
+function jobs(){var h='<div class="row"><input id="q" placeholder="Search employer, title, keyword" value="'+esc(F.q)+'"><select id="fs"><option value="">All statuses</option>'+Object.keys(STAT).map(function(k){return'<option value="'+k+'"'+(F.st===k?" selected":"")+">"+STAT[k]+"</option>"}).join("")+'</select><select id="fe"><option value="">All employers</option>'+
+ JOBS.filter(function(j){return!j.fixture}).map(function(j){return j.emp}).filter(function(e,i,a){return a.indexOf(e)===i}).map(function(e){return'<option'+(F.emp===e?" selected":"")+">"+esc(e)+"</option>"}).join("")+'</select><select id="so"><option value="score"'+(F.sort==="score"?" selected":"")+'>Sort: priority score</option><option value="deadline"'+(F.sort==="deadline"?" selected":"")+'>Sort: deadline</option></select><label><input type="checkbox" id="fx"'+(F.fx?" checked":"")+'> show test fixture</label></div>';
+ var l=visible().filter(function(j){return(!F.st||j.st===F.st)&&(!F.emp||j.emp===F.emp)&&(!F.q||(j.emp+" "+j.title+" "+j.country+" "+j.city).toLowerCase().indexOf(F.q.toLowerCase())>=0)});
+ l.sort(function(a,b){return F.sort==="deadline"?(a.deadline||"9999").localeCompare(b.deadline||"9999"):score(b)-score(a)});
+ h+=l.length?l.map(function(j){var g=gate(j);return'<div class="card job" data-id="'+j.id+'"><b>'+esc(j.emp)+"</b> · "+esc(j.title)+'<br>'+tagS(j)+'<span class="tag '+(g==="Actionable"?"t-ok":"t-bad")+'">'+g+'</span><small> '+esc(j.country)+" · deadline "+(j.deadline||"not found")+" · score "+score(j)+"/100 (not a recommendation unless actionable)</small></div>"}).join(""):'<p class="mu">No jobs match.</p>';return h}
+function detail(j){var h='<p><button class="btn" id="back">← Back</button></p><h2>'+esc(j.emp)+" – "+esc(j.title)+"</h2>"+tagS(j)+'<span class="tag">'+gate(j)+"</span>";
+ h+='<div class="card"><b>Source evidence</b> <small>(employer-published vs third-party stated in labels)</small><p>'+esc(j.ev)+'</p><ul>'+j.src.map(function(s){return'<li>'+(s[1]==="#"?esc(s[0]):'<a href="'+esc(s[1])+'" target="_blank" rel="noopener noreferrer">'+esc(s[0])+"</a>")+"</li>"}).join("")+"</ul>"+
+ "<p><b>Genuine application link:</b> "+(j.apply&&j.st!=="HR"?'<a href="'+esc(j.apply)+'" target="_blank" rel="noopener noreferrer">'+esc(j.apply)+"</a> <small>(employer homepage/landing, not a confirmed vacancy URL. Opening it applies for nothing.)</small>":"<b>None confirmed.</b> Do not apply through any third-party link.")+"</p>"+
+ "<p>Requisition: "+esc(j.req)+" · Posted: "+(j.posted||"not found")+" · Closing: "+(j.deadline||"not found")+" (time zone not published) · Last checked: "+TODAY+"</p></div>";
+ h+='<div class="card" style="margin-top:8px"><b>Risk flags</b><ul>'+j.risk.map(function(r){return"<li>"+esc(r)+"</li>"}).join("")+"</ul></div>";
+ h+='<div class="card" style="margin-top:8px"><b>Eligibility: '+esc(j.elig[0])+"</b><p>"+esc(j.elig[1])+"</p><p><b>Compensation:</b> "+esc(j.comp)+"</p>"+(j.note?"<p><b>Note:</b> "+esc(j.note)+"</p>":"")+"</div>";
+ h+='<div class="card" style="margin-top:8px"><b>Priority score '+score(j)+'/100</b> <small>(factor points; verification is a gate on top)</small><table>'+Object.keys(W).map(function(k){return"<tr><td>"+k+"</td><td>"+j.sc[k]+"/5 × weight "+W[k]+"</td></tr>"}).join("")+"<tr><td>verification</td><td>"+(j.st==="VO"?"full":j.st==="OI"?"partial":"0")+" × "+VW+"</td></tr></table></div>";
+ var cur=stage(j);h+='<div class="card" style="margin-top:8px"><b>Tracking</b> <small>(saved in this browser only)</small><div class="row"><select id="stg">'+PIPE.map(function(p){return"<option"+(p===cur?" selected":"")+">"+p+"</option>"}).join("")+'</select><label>Follow-up <input type="date" id="fu" value="'+esc(ST.follow[j.id]||"")+'"></label></div><textarea id="nt" placeholder="Notes">'+esc(ST.note[j.id]||"")+'</textarea><p><small>History: '+esc((ST.hist[j.id]||[]).join(" → ")||"none")+"</small></p></div>";return h}
+function pipe(){return PIPE.map(function(p){var l=JOBS.filter(function(j){return stage(j)===p&&(!j.fixture)});return l.length?"<h2>"+p+" ("+l.length+')</h2>'+l.map(function(j){return'<div class="card job" data-id="'+j.id+'">'+esc(j.emp)+" · "+esc(j.title)+"</div>"}).join(""):""}).join("")}
+function win(){return"<h2>Recruitment windows</h2><p class='mu'>Planning windows only. Dates here are predicted from past cycles or third-party guides, never presented as confirmed.</p>"+WIN.map(function(w){return'<div class="card" style="margin-bottom:8px"><b>'+w[0]+"</b><br>"+w[1]+"<br><small>"+w[2]+"</small></div>"}).join("")}
+function emp_old(){return'<h2>Priority employers (20)</h2><div class="scroll"><table><tr><th>Employer</th><th>Research status</th></tr>'+EMP.map(function(e){return"<tr><td>"+e[0]+"</td><td>"+e[1]+"</td></tr>"}).join("")+"</table></div><p class='mu'>Official careers URLs, recruitment cycles and compensation are not filled in for employers I have not yet researched. I will not guess them.</p>"}
+function cv(){var s=S("ejb_cv","");return'<h2>CV upload</h2><div class="banner">Stored only in this browser (localStorage). It is not uploaded anywhere by this page. Anyone using this same browser profile could read it, so use “Delete” on shared devices. Plain-text files parse here; DOCX/PDF need server-side parsing, which this prototype does not include.</div><input type="file" id="cvf" accept=".txt,.md"> <button class="btn" id="cvd">Delete stored CV</button><h2>Extracted text (edit to correct)</h2><textarea id="cvt" style="min-height:220px">'+esc(s)+'</textarea><button class="btn" id="cvs">Save corrections</button><h2>Items to confirm before any use</h2><ul><li>Two master-CV versions differ: top 2% vs top 1.5%, a FUTO Research Assistant role only in one, and a Research Development Officer entry marked “onboarding”.</li><li>QGIS, DWISM and ANSYS projects are not in any CV on file.</li><li>Intern Analyst role at SCIDaR dates from Jul 2026 per CV.</li></ul>'}
+function logs(){return'<h2>Source and verification log</h2><div class="scroll"><table><tr><th>Date</th><th>Check</th><th>Result</th></tr>'+
+ [["2026-11-01","Web search: Shell Nigeria graduate 2026","Aggregators only. Official page not opened."],["2026-11-01","Web search: NLNG/Chevron/TotalEnergies/ExxonMobil Nigeria","Aggregators only. Mostly 2025 or headline-only."],["2026-11-01","Fetch Shell Workday URL","FAILED: tool allows only URLs from prior results. Logged as error, not as closure."]].map(function(r){return"<tr><td>"+r.join("</td><td>")+"</td></tr>"}).join("")+"</table></div>"+
+ '<h2>System status</h2><ul><li>Last successful data refresh: <b>'+SNAPSHOT+'</b>. Sources checked: 2 searches, 0 employer pages.</li><li>'+healthHtml()+'</li></ul>'+
+ '<button class="btn" id="ej">Export JSON</button> <button class="btn" id="ec">Export CSV</button> <button class="btn" id="rs">Reset my tracking data</button>'}
+function dl(n,t,m){var a=document.createElement("a");a.href="data:"+m+";charset=utf-8,"+encodeURIComponent(t);a.download=n;a.click()}
+function render(){nav();var m=document.getElementById("main");
+ m.innerHTML=sel?detail(JOBS.filter(function(j){return j.id===sel})[0]):({dash:dash,jobs:jobs,pipe:pipe,win:win,emp:emp,cv:cv,logs:logs,tailor:tailor,prep:prep,out:out})[tab]();bind()}
+function bind(){var $=function(i){return document.getElementById(i)};
+ [].forEach.call(document.querySelectorAll(".job"),function(c){c.onclick=function(){sel=c.dataset.id;render()}});
+ if($("back"))$("back").onclick=function(){sel=null;render()};
+ if(sel){var id=sel;$("stg").onchange=function(){var o=ST.stage[id]||"(default)";ST.stage[id]=this.value;(ST.hist[id]=ST.hist[id]||[]).push(TODAY+": "+this.value);P("ejb_state",ST)};$("fu").onchange=function(){ST.follow[id]=this.value;P("ejb_state",ST)};$("nt").onchange=function(){ST.note[id]=this.value;P("ejb_state",ST)}}
+ if($("q")){$("q").oninput=function(){F.q=this.value;var p=this.selectionStart;render();var q=$("q");q.focus();q.setSelectionRange(p,p)};$("fs").onchange=function(){F.st=this.value;render()};$("fe").onchange=function(){F.emp=this.value;render()};$("so").onchange=function(){F.sort=this.value;render()};$("fx").onchange=function(){F.fx=this.checked;render()}}
+ if($("cvf"))$("cvf").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){P("ejb_cv",String(r.result));render()};r.readAsText(f)};
+ if($("cvs"))$("cvs").onclick=function(){P("ejb_cv",$("cvt").value);alert("Saved in this browser only.")};
+ if($("cvd"))$("cvd").onclick=function(){try{localStorage.removeItem("ejb_cv")}catch(e){}render()};
+ if($("ej"))$("ej").onclick=function(){dl("jobs.json",JSON.stringify({exported:SNAPSHOT,jobs:JOBS,tracking:ST},null,1),"application/json")};
+ if($("ec"))$("ec").onclick=function(){var rows=[["id","employer","title","status","deadline","gate","score","stage"]].concat(JOBS.filter(function(j){return!j.fixture}).map(function(j){return[j.id,j.emp,j.title,STAT[j.st],j.deadline||"",gate(j),score(j),stage(j)]}));dl("jobs.csv",rows.map(function(r){return r.map(function(c){return'"'+String(c).replace(/"/g,'""')+'"'}).join(",")}).join("\n"),"text/csv")};
+ if($("rs"))$("rs").onclick=function(){ST={stage:{},note:{},follow:{},hist:{}};P("ejb_state",ST);render()};bind2()}
+document.getElementById("stamp").textContent="Last data refresh: "+SNAPSHOT+" · automatic weekly refresh: not configured";
+
+var HEALTH=null;
+function healthHtml(){if(!HEALTH||!HEALTH.last_run_utc)return"<b>Automated refresh: no run recorded.</b> Either this copy is not hosted from the repo (the artifact preview cannot read repo data) or the Action has not run yet.";
+ var age=Math.floor((Date.now()-new Date(HEALTH.last_run_utc))/864e5);
+ return"<b>Automated refresh last run: "+esc(HEALTH.last_run_utc)+(age>9?' <span class="tag t-bad">STALE: '+age+" days old</span>":"")+"</b> · sources checked "+HEALTH.checked+", read OK "+HEALTH.ok+", failed/skipped "+HEALTH.failed+", changed "+HEALTH.changed+". Page changes are leads to check by hand, not verified vacancies."}
+try{fetch("data/status.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){HEALTH=j;if(j&&j.last_run_utc){document.getElementById("stamp").textContent="Last automated refresh: "+j.last_run_utc+" · "+j.ok+"/"+j.checked+" sources read";if(tab==="emp"||tab==="logs")render()}}).catch(function(){})}catch(e){}
+function emp(){return'<h2>Priority employers ('+EMP.length+')</h2><p class="mu">URL provenance: <b>cited</b> = appeared in a search result; <b>memory</b> = from my memory, not yet checked. The weekly job will report any that fail. None of these has been confirmed as an official vacancy page.</p><div class="scroll"><table><tr><th>Employer</th><th>Type</th><th>Careers URL</th><th>Findings</th><th>Weekly check</th></tr>'+EMP.map(function(e){var s=HEALTH&&HEALTH.sources&&HEALTH.sources[e.id];return"<tr><td><b>"+esc(e.n)+"</b></td><td>"+esc(e.cat)+'</td><td><a href="'+esc(e.url)+'" target="_blank" rel="noopener noreferrer">'+esc(e.url.replace("https://",""))+"</a><br><small>"+(e.prov==="c"?"cited":"memory")+"</small></td><td>"+esc(e.note)+"</td><td>"+(s?esc(s.result)+(s.reason?"<br><small>"+esc(s.reason)+"</small>":""):"<small>not run</small>")+"</td></tr>"}).join("")+"</table></div>"}
+var STOP2=new Set("the and for with that this will you your our their its including etc must should can may have has not within across into per are from experience work team ability skills role strong knowledge years working able also such other more all any who which what when where their they them been being than then these those both each very well".split(" "));
+function wordsOf(t){return t.toLowerCase().replace(/[^a-z0-9+#\/ -]/g," ").split(/\s+/).filter(function(w){return w.length>2&&!STOP2.has(w)})}
+function isBullet(l){return/^\s*([-•*–]|\d+[.)])\s+/.test(l)}
+function isHead(l){var t=l.trim();return t.length>2&&t.length<50&&(t===t.toUpperCase()&&/[A-Z]/.test(t)||/^#+\s/.test(t))}
+function tailorRun(cvT,jdT){var f={};wordsOf(jdT).forEach(function(w){f[w]=(f[w]||0)+1});
+ var kws=Object.keys(f).sort(function(a,b){return f[b]-f[a]||b.length-a.length}).slice(0,25);
+ var lines=cvT.split("\n");var lc=lines.map(function(l){return l.toLowerCase()});
+ var matrix=kws.map(function(k){var hit=[];lc.forEach(function(l,i){if(l.indexOf(k)>=0&&lines[i].trim())hit.push(lines[i].trim())});return{k:k,hit:hit}});
+ var sc=function(l){var s=0,ll=l.toLowerCase();kws.forEach(function(k){if(ll.indexOf(k)>=0)s++});return s};
+ var out=[],log=[],i=0;
+ while(i<lines.length){if(isBullet(lines[i])){var j=i;while(j<lines.length&&isBullet(lines[j]))j++;var blk=lines.slice(i,j).map(function(l,n){return{l:l,n:n,s:sc(l)}});
+   var srt=blk.slice().sort(function(a,b){return b.s-a.s||a.n-b.n});srt.forEach(function(b,n){if(b.n!==n)log.push("Moved up/down: \""+b.l.trim().slice(0,70)+"…\" (JD keyword hits: "+b.s+")")});srt.forEach(function(b){out.push(b.l)});i=j}else{out.push(lines[i]);i++}}
+ var direct=matrix.filter(function(m){return m.hit.length}),gaps=matrix.filter(function(m){return!m.hit.length});
+ var best=[];direct.forEach(function(m){m.hit.forEach(function(h){if(best.indexOf(h)<0)best.push(h)})});best.sort(function(a,b){return sc(b)-sc(a)});
+ return{matrix:matrix,direct:direct,gaps:gaps,cv:out.join("\n"),log:log,best:best.slice(0,3)}}
+function tailor(){var cvS=S("ejb_cv","");return'<h2>Truthful CV tailoring</h2><div class="banner">This tool only <b>reorders</b> bullets inside your own CV by relevance and lists keyword matches and gaps. It never adds, rewrites or invents anything. Wording changes (summary, phrasing) are done with me in chat after you upload your final CV, so each change is checked against your evidence. Processing happens in your browser only.</div><label>Job description (paste)</label><textarea id="tjd" style="min-height:140px"></textarea><label>CV text (loaded from the CV tab; or paste)</label><textarea id="tcv" style="min-height:140px">'+esc(cvS)+'</textarea><p><button class="btn" id="tgo">Analyse and reorder</button></p><div id="tout"></div>'}
+function bindT(){var $=function(i){return document.getElementById(i)};if(!$("tgo"))return;
+ $("tgo").onclick=function(){var jd=$("tjd").value,cv=$("tcv").value;if(!jd.trim()||!cv.trim()){$("tout").innerHTML="<p>Paste both the job description and your CV text.</p>";return}
+  var r=tailorRun(cv,jd);var h="<h2>Match matrix</h2><div class='scroll'><table><tr><th>JD term</th><th>Status</th><th>Evidence in your CV (verbatim)</th></tr>"+r.matrix.map(function(m){return"<tr><td>"+esc(m.k)+"</td><td>"+(m.hit.length?"Direct text match":"<b>Gap: do not claim</b>")+"</td><td>"+esc(m.hit.slice(0,2).join(" | "))+"</td></tr>"}).join("")+"</table></div><p><small>A text match only shows the word appears. You must still judge whether it is a real match. Words in the JD that are not skills (e.g. company terms) will appear too.</small></p>";
+  h+="<h2>Do not claim</h2><p>"+(r.gaps.map(function(g){return esc(g.k)}).join(", ")||"none")+"</p><h2>Change log</h2><ul>"+(r.log.map(function(l){return"<li>"+esc(l)+"</li>"}).join("")||"<li>No reordering needed.</li>")+"</ul><p><small>Nothing was added, deleted or reworded.</small></p>";
+  var cl="Dear Hiring Team,\n\nI am applying for the [ROLE] position at [EMPLOYER]. The most relevant parts of my record are:\n\n"+r.best.map(function(b){return b.replace(/^\s*([-•*–]|\d+[.)])\s+/,"- ")}).join("\n")+"\n\n[Add one sentence on why this employer, from their own published material.]\n\nYours sincerely,\nChiamaka Onuh";
+  h+="<h2>Tailored CV (plain text, ATS-safe)</h2><pre style='white-space:pre-wrap'>"+esc(r.cv)+"</pre><button class='btn' id='tdl'>Download .txt</button> <button class='btn' id='tdc'>Download cover-letter skeleton</button>";
+  $("tout").innerHTML=h;$("tdl").onclick=function(){dl("Employer_Role_CV_"+TODAY+".txt",r.cv,"text/plain")};$("tdc").onclick=function(){dl("Employer_Role_CoverLetter_"+TODAY+".txt",cl,"text/plain")}}}
+var STAR=[["Recruitment and deployment (SCIDaR)","Phase 3 of a five-state maternal health programme needed field officers in place.","Coordinate recruitment of Field Implementation Support Officers.","Coordinated end-to-end recruitment of 100+ prospective FISOs, conducted 76 interviews with an external hiring partner, led deployment of 52 across 5 states.","Facility-level data collection across 85% of target facilities to date.","Leadership, delivery, communication"],
+["Data quality (SCIDaR)","Consortium partners’ data had to be reliable.","Validate and quality-assure submissions.","Data validation and QA across 7 states from the previous phase; reviewed 200+ ODK submissions in Phase 3.","95% data quality score across partners.","Analytical thinking, problem-solving"],
+["Implementation tracker (SCIDaR)","Many deliverables, several workstreams.","Make progress visible.","Built a Phase 3 tracker and followed up action points across meetings.","19 deliverables tracked; 13 (68%) on track, 1 completed.","Planning, delivery, teamwork"],
+["TiO2 drilling-fluid research (FUTO)","Conventional CMC additive set the benchmark for fluid-loss control.","Test a green-synthesised TiO2 alternative (team of 3).","Led the filtration-control testing across formulations and control samples.","5.5% lower fluid loss; filter cake 2/32 in vs 2.5/32 in for CMC.","Analytical thinking, technical problem-solving, teamwork"],
+["Class representative (FUTO)","A class of 130 needed one coordinating voice over six years.","Liaise between students, lecturers and the department.","Coordinated 65+ group submissions; organised peer tutorials; set up groups to investigate erroneous results.","Group deadlines met across SIWES, final-year and lab reports (as stated in CV; confirm outcome wording).","Leadership, communication, adaptability"],
+["Production operations internship (NLNG)","Six-month placement across all 6 process trains.","Learn operations and keep to safety procedure.","Monitored process units via DCS/SCADA, completed 15+ HSE checks, presented a liquid handling unit deck to supervisors.","Presentation delivered to unit supervisors.","Adaptability, communication, safety"],
+["SPE membership drive","Chapter needed more members.","Recruit across departments.","Targeted student outreach.","27 new members across 4 departments in 2 months.","Initiative, communication"]];
+var QA=[["Numerical","Mud weight 10.5 ppg, TVD 9,000 ft. Hydrostatic pressure?","0.052 × 10.5 × 9,000 = 4,914 psi."],
+["Numerical","Well makes 1,200 stb/d at 800 psi drawdown. Productivity index?","1,200 ÷ 800 = 1.5 stb/d/psi."],
+["Numerical","Production falls from 24,000 to 21,360 bpd. Percentage decline?","2,640 ÷ 24,000 = 11%."],
+["Numerical","OOIP: A=100 acres, h=30 ft, porosity 0.20, Sw 0.30, Bo 1.25 rb/stb.","7,758 × 100 × 30 × 0.2 × 0.7 ÷ 1.25 ≈ 2.61 million stb."],
+["Logical","Series 2, 6, 12, 20, 30, ?","42 (n × (n+1))."],
+["Verbal/SJT","On site you notice a colleague skipping a permit-to-work step to save time. Best response?","Stop the task, raise it immediately through the proper channel, and do not proceed until the permit is correct. Safety outranks schedule."],
+["Technical","Name the main reservoir drive mechanisms.","Solution-gas, gas-cap, water drive, compaction and gravity drainage (often combined)."],
+["Technical","What does a positive skin factor mean?","Extra pressure drop near the wellbore, usually damage, which reduces productivity."],
+["Technical","What is Archie’s equation used for?","Estimating water saturation from resistivity: Sw = ((a·Rw)/(φ^m·Rt))^(1/n)."],
+["Technical","Why does filter-cake thickness matter in a water-based mud?","A thin, tight cake limits filtrate invasion and sticking risk. This links directly to your TiO2 work."],
+["Technical","What is bubble-point pressure?","Pressure at which the first gas comes out of solution as pressure falls."],
+["Commercial","Name two factors that set a project’s breakeven oil price.","Capital and operating costs, fiscal terms, production profile and discount rate (any two with a reason)."],
+["Behavioural","Tell me about a time you led without formal authority.","Use the class representative or SPE examples; keep S, T, A, R explicit."]];
+function prep(){return'<h2>Interview and assessment prep</h2><div class="banner">Employer-specific assessment formats have not been researched or verified, and I do not know any employer’s live questions. The material below is original practice content. Check each employer’s own site for the real stages.</div><h2>Practice bank</h2>'+QA.map(function(q){return"<details class='card' style='margin-bottom:6px'><summary><b>"+q[0]+":</b> "+esc(q[1])+"</summary><p>"+esc(q[2])+"</p></details>"}).join("")+'<h2>STAR bank (from your master CV)</h2><p class="mu">Figures come from the Europass master CV. Your two CV versions disagree on some details, so confirm each before using it in an interview.</p><div class="scroll"><table><tr><th>Example</th><th>Situation</th><th>Task</th><th>Action</th><th>Result</th><th>Shows</th></tr>'+STAR.map(function(r){return"<tr><td><b>"+esc(r[0])+"</b></td><td>"+r.slice(1).map(esc).join("</td><td>")+"</td></tr>"}).join("")+"</table></div>"}
+var OUT=S("ejb_out",[]);
+function out(){return'<h2>LinkedIn outreach tracker</h2><div class="banner">Drafts only. Nothing is sent from here. You read, edit and send each message yourself, and I do not invent contacts, relationships or referrals. Use a real person’s public profile.</div><div class="row"><input id="on" placeholder="Person’s name"><input id="oe" placeholder="Employer"><input id="op" placeholder="Programme or role"><input id="ou" placeholder="Their public profile URL"></div><button class="btn" id="og">Generate draft</button><textarea id="om" placeholder="Draft appears here (LinkedIn connection notes are limited to about 300 characters)"></textarea><small id="oc"></small><p><button class="btn" id="oa">Save to tracker</button></p><div class="scroll"><table><tr><th>Name</th><th>Employer</th><th>Status</th><th>Follow-up</th><th></th></tr>'+OUT.map(function(o,i){return"<tr><td>"+esc(o.n)+(o.u?' <a href="'+esc(o.u)+'" target="_blank" rel="noopener noreferrer">profile</a>':"")+"</td><td>"+esc(o.e)+" · "+esc(o.p)+'</td><td><select data-i="'+i+'" class="os">'+["Draft","Approved by me","Sent by me","Replied","No reply"].map(function(s){return"<option"+(s===o.s?" selected":"")+">"+s+"</option>"}).join("")+'</select></td><td><input type="date" data-i="'+i+'" class="of" value="'+esc(o.f||"")+'"></td><td><button class="btn od" data-i="'+i+'">Delete</button></td></tr>'}).join("")+"</table></div>"}
+function bindO(){var $=function(i){return document.getElementById(i)};if(!$("og"))return;
+ $("og").onclick=function(){var m="Hello "+($("on").value||"[name]")+", I am a First Class Petroleum Engineering graduate (FUTO) with production operations experience at Nigeria LNG. I am interested in "+($("op").value||"[programme]")+" at "+($("oe").value||"[employer]")+". Could I ask what you would advise a graduate applicant to focus on? Thank you.";$("om").value=m;$("oc").textContent=m.length+" characters"};
+ $("oa").onclick=function(){OUT.push({n:$("on").value,e:$("oe").value,p:$("op").value,u:$("ou").value,m:$("om").value,s:"Draft",f:""});P("ejb_out",OUT);render()};
+ [].forEach.call(document.querySelectorAll(".os"),function(s){s.onchange=function(){OUT[s.dataset.i].s=s.value;P("ejb_out",OUT)}});
+ [].forEach.call(document.querySelectorAll(".of"),function(s){s.onchange=function(){OUT[s.dataset.i].f=s.value;P("ejb_out",OUT)}});
+ [].forEach.call(document.querySelectorAll(".od"),function(s){s.onclick=function(){OUT.splice(s.dataset.i,1);P("ejb_out",OUT);render()}})}
+function bind2(){bindT();bindO()}
+render();
+</script></body></html>
