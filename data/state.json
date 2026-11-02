@@ -4,14 +4,14 @@
   "keywords": [
    "graduate"
   ],
-  "last_ok": "2026-11-01T08:48:26Z"
+  "last_ok": "2026-11-02T05:49:45Z"
  },
  "nlng": {
   "hash": "65754dd7a550de1f5673c06dc805c61afc8b467396eaefffaa65f1bc9d92bede",
   "keywords": [
    "nigeria"
   ],
-  "last_ok": "2026-11-01T08:48:29Z"
+  "last_ok": "2026-11-02T05:49:48Z"
  },
  "aradel": {
   "hash": "60717915070cd08bc2090324246096e667ab40831aba101258f0fdc1156e099d",
@@ -21,7 +21,7 @@
    "nigeria",
    "apply now"
   ],
-  "last_ok": "2026-11-01T08:48:33Z"
+  "last_ok": "2026-11-02T05:49:52Z"
  },
  "renaissance": {
   "hash": "e24e39afb55250da7203d82b6f3c8dd1a7f670980e3b5550b98def9b913e1d06",
@@ -29,38 +29,37 @@
    "production engineer",
    "apply now"
   ],
-  "last_ok": "2026-11-01T08:48:36Z"
+  "last_ok": "2026-11-02T05:49:55Z"
  },
  "slb": {
-  "hash": "3e28be2c95a05f3282b6383528ebf38c2c9e3cd943723af2de549da7c1d3c379",
+  "hash": "8beb9f219717e63225ccdbcd5341338b8ae1f74861d5470fa7aba68fefdf5ccd",
   "keywords": [
    "graduate",
-   "reservoir",
    "field engineer"
   ],
-  "last_ok": "2026-11-01T08:48:39Z"
+  "last_ok": "2026-11-02T05:49:59Z"
  },
  "bakerhughes": {
-  "hash": "a899548176304bcd45f3b9acec31af2abc9ca89e52742db6ed2a2727ae44ed3f",
+  "hash": "137cdaf2bcd1c6a73145c256fb2027302545b2235ae2f6d081588a4111952b8b",
   "keywords": [
    "early career",
    "early careers"
   ],
-  "last_ok": "2026-11-01T08:48:44Z"
+  "last_ok": "2026-11-02T05:50:04Z"
  },
  "halliburton": {
   "hash": "d74a2b1b71de48c9c89b0834bd0d435a696dd29f213572976019a2669299322e",
   "keywords": [
    "graduate"
   ],
-  "last_ok": "2026-11-01T08:48:47Z"
+  "last_ok": "2026-11-02T05:50:07Z"
  },
  "chevron": {
   "hash": "ee929d992d932fbbd597be69017b4635aae0208e5ff98e043d1732f3602a3ac7",
   "keywords": [
    "early career"
   ],
-  "last_ok": "2026-11-01T08:48:53Z"
+  "last_ok": "2026-11-02T05:50:13Z"
  },
  "eni": {
   "hash": "97b9d5a0f4c8fbf051452d52b27fc01bc94886a51a77c6c431d895834c38d228",
@@ -69,42 +68,42 @@
    "2027",
    "nigeria"
   ],
-  "last_ok": "2026-11-01T08:49:00Z"
+  "last_ok": "2026-11-02T05:50:20Z"
  },
  "equinor": {
   "hash": "9439c17e4f2ade0451d92a3c51f29c670c945ee61e6e762306462fb311623681",
   "keywords": [
    "graduate"
   ],
-  "last_ok": "2026-11-01T08:49:03Z"
+  "last_ok": "2026-11-02T05:50:23Z"
  },
  "aramco": {
   "hash": "63ed68a91b5da734cb49007ff0081f8ca11df6666b09406ec26f1822da7bdc0a",
   "keywords": [],
-  "last_ok": "2026-11-01T08:49:06Z"
+  "last_ok": "2026-11-02T05:50:27Z"
  },
  "qatar": {
-  "hash": "eee84a686a76106bc95bc1bb6a0ddc80b718cc63a78ee7f5630058a2f7df02de",
+  "hash": "c969812ffa4879353a14bc963181a9a79cc7d9ba890f29ac414bfb326ce1c0c5",
   "keywords": [
    "petroleum"
   ],
-  "last_ok": "2026-11-01T08:49:13Z"
+  "last_ok": "2026-11-02T05:50:34Z"
  },
  "petrobras": {
   "hash": "3f131c80310e2571d24d03f0475cfaf69429c59be7c0b20a48a7e8efaa27a3aa",
   "keywords": [
    "petroleum"
   ],
-  "last_ok": "2026-11-01T08:49:16Z"
+  "last_ok": "2026-11-02T05:50:37Z"
  },
  "nnpc": {
   "hash": "0971848a1ead9191ffe89c0f691d8ca15e3707fcfd50131fd3476ae88c5c777e",
   "keywords": [],
-  "last_ok": "2026-11-01T08:49:29Z"
+  "last_ok": "2026-11-02T05:50:51Z"
  },
  "exxon": {
   "hash": "9ab9d02542f97cda646a672982a8d9d32b2aee9f3c9dcd53fd5ff6d6e3cd3e0e",
   "keywords": [],
-  "last_ok": "2026-11-01T08:48:50Z"
+  "last_ok": "2026-11-02T05:50:10Z"
  }
 }
